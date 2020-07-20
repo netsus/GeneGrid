@@ -1,0 +1,48 @@
+div.wrapper {
+    margin:50px;
+    padding:30px;
+    left:15%;
+    width:800px;
+    position: relative;
+}
+h1{
+    text-align: center;
+    background-color: cornflowerblue;
+    color: white;
+}
+table.mother_table {
+    border: 1px black;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 400px;
+    height: 200px;
+}
+td{text-align:center;}
+span.dp {
+    margin: 40px 44px;
+    text-align:center;
+    display: none;
+}
+div#chr1:hover span.dp {display:block;}
+div#chr1 {
+    background: rgb(183, 0, 255,1);
+    width: 100px;
+    height: 100px;
+}
+div#chr2 {
+    background:rgb(183, 0, 255,0.6);
+    width: 100px;
+    height: 100px;
+}
+div#chr2:hover span.dp {display:block;}
+div.gradation {
+    position:relative;
+    left:-50%;
+    margin-left:400px;
+}
+div div span {
+    position: absolute;
+    margin: 87px 23px 10px;
+    /* padding-top:20px; */
+    text-align: center;
+}

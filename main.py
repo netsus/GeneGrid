@@ -1,0 +1,48 @@
+import pandas as pd
+
+df = pd.read_csv('test.csv',index_col=False)
+
+html_text = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>Gene Grid</title>
+</head>
+<body>
+<div class="wrapper">
+        <h1> MTOR</h1><br>
+        <table class="mother_table" border="1">
+            <tr>
+                <th>Gene</th>
+                <th>CHR</th>
+                <th>POS</th>
+                <th>mutation</th>
+            </tr>
+            <tr>
+                <td rowspan="2">MTOR</td>
+                <td>1</td>
+                <td>1</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+        <hr>
+        <div class="gradation">
+            <div id="chr1"><span class="dp">5</span><span id="mtor">MTOR</span></div>
+            <div id="chr2"><span class="dp">3</span></div>
+        </div>
+        
+    </div>
+
+    <script type="text/javascript" src="../js/grid.js"></script>
+</body>
+</html>"""
+
+with open('html/Python_GeneGrid.html','w') as fo:
+    fo.write(html_text)
