@@ -22,8 +22,13 @@ table.mother_table {
 
 td{text-align:center;}
 span.dp {
-    margin: 40px 44px;
-    text-align:center;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px; /* margin is -0.5 * dimension */
+    margin-top: -25px; 
     display: none;
 }
 
