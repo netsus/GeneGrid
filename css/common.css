@@ -27,28 +27,30 @@ span.dp {
     display: none;
 }
 
-div#chr1:hover span.dp {display:block;}
+div#chr1:hover span.dp {display:inline;}
+
 div#chr1 {
     background: rgb(183, 0, 255,1);
     width: 100px;
-    height: 100px;
+    height: 10%;
 }
 div#chr2 {
     background:rgb(183, 0, 255,0.5);
     width: 100px;
-    height: 100px;
+    height: 10%;
 }
 
-div#chr2:hover span.dp {display:block;}
+div#chr2:hover span.dp {display:inline;}
+
 div.gradation {
     position:relative;
+    height:70px;
     left:-50%;
     margin-left:400px;
 }
 
 div div span {
-    position: absolute;
-    margin: 87px 23px 10px;
+    position:relative;
     /* padding-top:20px; */
     text-align: center;
 }
