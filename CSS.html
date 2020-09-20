@@ -9,24 +9,53 @@
             color:black;
             text-decoration: none;
         }
+        h1 {
+            text-align: center;
+            border-bottom: 1px solid black;
+            padding: 27px;
+            margin:0;
+        }
+        body{
+            margin:0;
+        }
+        #grid ol{
+            border-right: 1px solid black;
+            width:100px;
+            padding-top:20px;
+            padding-left: 34px;
+            margin:0px;
+        }
+        @media(min-width:500px){
+            #grid{
+                display:grid;
+                grid-template-columns: 150px 1fr;
+            }
+        }
+        #grid div {
+            padding:10px;
+        }
     </style>
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <ol>
-    <li><a href="HTML.html">HTML</a></li>
-    <li><a href="CSS.html" style="color:red;text-decoration:underline;">CSS</a></li>
-    <li><a href="JavaScript.html">JavaScript</a></li>
-    </ol>
-    <h2>CSS</h2>
-    <p>
-        Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
-    </p>
-    <p>
-        CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
-    </p>
-    <p>
-        Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.[4]
-    </p>
+    <div id="grid">
+        <ol>
+        <li><a href="HTML.html">HTML</a></li>
+        <li><a href="CSS.html" style="color:red;text-decoration:underline;">CSS</a></li>
+        <li><a href="JavaScript.html">JavaScript</a></li>
+        </ol>
+        <div>
+            <h2>CSS</h2>
+            <p>
+                Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+            </p>
+            <p>
+                CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+            </p>
+            <p>
+                Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.[4]
+            </p>
+        </div>
+    </div>
 </body>
 </html>
