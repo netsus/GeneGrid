@@ -3,14 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/common.css">
-    <!-- <link rel="stylesheet" href="../css/reset.css"> -->
+    <!-- <link rel="stylesheet" href="../css/common.css"> -->
     <title>Gene Grid</title>
+    <style>
+        div.wrapper {
+            margin:50px;
+            padding:30px;
+            left:15%;
+            width:800px;
+            position: relative;
+        }
+        span.dp {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px; /* margin is -0.5 * dimension */
+            margin-top: -25px; 
+            display: none;
+        }
+        div#chr1:hover {
+            border:0.5px solid red;
+        }
+        div#chr1:hover span.dp {display:inline;}
+        div#chr1 {
+            background: rgb(183, 0, 255,1);
+            width: 100px;
+            height: 20%;
+        }
+        div#chr2 {
+            background:rgb(183, 0, 255,0.5);
+            width: 100px;
+            height: 20%;
+        }
+        div#chr2:hover {
+            border:0.5px solid red;
+        }
+        div#chr2:hover span.dp {display:inline;}
+
+        div.gradation {
+            position:relative;
+            height:70px;
+            left:-50%;
+            margin-left:400px;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
-        <h1> MTOR</h1><br>
-        <table class="mother_table" border="1">
+        <!-- <table class="mother_table" border="1">
             <tr>
                 <th>Gene</th>
                 <th>CHR</th>
@@ -29,10 +71,13 @@
                 <td>3</td>
             </tr>
         </table>
-        <hr>
+        <hr> -->
         <div class="gradation">
             <div id="chr1"><span class="dp">5</span><span id="mtor">MTOR</span></div>
-            <div id="chr2"><span class="dp">3</span></div>
+
+            <div id="chr2">
+                <span class="dp">3</span>
+            </div>
             <div id="chr2"><span class="dp">8</span></div>
             <div id="chr2"><span class="dp">2</span></div>
             <div id="chr2"><span class="dp">3</span></div>
