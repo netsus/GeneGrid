@@ -1,0 +1,62 @@
+// Init~ Don't touch here!
+$color: #555;
+
+body { // 전체 영역
+  padding: 80px; 
+}
+.container {
+  // width: 380px;
+  // height: 250px;
+  border: 10px solid rgba(black, .1); // 전체 테두리리
+  border-radius: 10px;
+  display: grid;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  // font-size: 20px;
+  color: $color;
+  font-weight: 900;
+  &::before {
+    content: "";
+    position: absolute;
+    // top: 5px;
+    // left: 5px;
+    box-sizing: border-box;
+    width: calc(100%);
+    height: calc(100%);
+    z-index: -1;
+  }
+  $colors: (tomato, orange, limegreen, dodgerblue, hotpink, darkgray, crimson, orangered, lawngreen, aqua, royalblue, wheat, brown, gray, salmon, deeppink, gold, springgreen, slateblue, darkslategray);
+  @each $color in $colors {
+    $index: index($colors, $color);
+    &:nth-child(#{$index})::before {
+      background-color: rgba($color, .8);
+    }
+  }
+}
+
+.item:hover {
+  border: 3px solid red;
+}
+
+// Test here!
+.container {
+  width:300px;
+  height:300px;
+  display: grid;
+  // grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(1px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
+}
+.gene {
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  color: $color;
+  font-weight: 900;
+}

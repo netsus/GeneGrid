@@ -3,92 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../css/common.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="../css/grid.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Gene Grid</title>
-    <style>
-        div.wrapper {
-            margin:50px;
-            padding:30px;
-            left:15%;
-            width:800px;
-            position: relative;
-        }
-        span.dp {
-            position: absolute;
-            width: 100px;
-            height: 50px;
-            top: 50%;
-            left: 50%;
-            margin-left: -50px; /* margin is -0.5 * dimension */
-            margin-top: -25px; 
-            display: none;
-        }
-        div#chr1:hover {
-            border:0.5px solid red;
-        }
-        div#chr1:hover span.dp {display:inline;}
-        div#chr1 {
-            background: rgb(183, 0, 255,1);
-            width: 100px;
-            height: 20%;
-        }
-        div#chr2 {
-            background:rgb(183, 0, 255,0.5);
-            width: 100px;
-            height: 20%;
-        }
-        div#chr2:hover {
-            border:0.5px solid red;
-        }
-        div#chr2:hover span.dp {display:inline;}
 
-        div.gradation {
-            position:relative;
-            height:70px;
-            left:-50%;
-            margin-left:400px;
-        }
-    </style>
 </head>
 <body>
-    <div class="wrapper">
-        <!-- <table class="mother_table" border="1">
-            <tr>
-                <th>Gene</th>
-                <th>CHR</th>
-                <th>POS</th>
-                <th>mutation</th>
-            </tr>
-            <tr>
-                <td rowspan="2">MTOR</td>
-                <td>1</td>
-                <td>1</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-        </table>
-        <hr> -->
-        <div class="gradation">
-            <div id="chr1"><span class="dp">5</span><span id="mtor">MTOR</span></div>
-
-            <div id="chr2">
-                <span class="dp">3</span>
-            </div>
-            <div id="chr2"><span class="dp">8</span></div>
-            <div id="chr2"><span class="dp">2</span></div>
-            <div id="chr2"><span class="dp">3</span></div>
-            <div id="chr2"><span class="dp">8</span></div>
-            <div id="chr2"><span class="dp">2</span></div>
-            <div id="chr2"><span class="dp">4</span></div>
-            <div id="chr2"><span class="dp">8</span></div>
-            <div id="chr2"><span class="dp">2</span></div>
+    <div class="gene">MTOR
+        <div class="container">
+            <div class="item" href="#" data-toggle="tooltip" data-placement="top" title="CHR: 1 Pos: 10011010 TotalDepth: 1500"></div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
+            <div class="item">6</div>
         </div>
     </div>
-
-    <script type="text/javascript" src="../js/grid.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();   
+        });
+    </script>
 </body>
 </html>
